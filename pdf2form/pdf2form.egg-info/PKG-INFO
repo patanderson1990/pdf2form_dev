@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: pdf2form
+Version: 1.0.0a
+Summary: Extract information from PDF files and enter it into a form
+Home-page: UNKNOWN
+Author: Patrick Anderson
+Author-email: patrickandersonuf@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: automation,pdf,forms
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Office/Business
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Environment :: Console
+Classifier: Operating System :: Unix

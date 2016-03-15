@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+pdf2form/__init__.py
+pdf2form/pdf2form.py
+pdf2form.egg-info/PKG-INFO
+pdf2form.egg-info/SOURCES.txt
+pdf2form.egg-info/dependency_links.txt
+pdf2form.egg-info/top_level.txt

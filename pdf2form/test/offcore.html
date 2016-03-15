@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>
+            OSR
+        </title>
+        <script type="text/javascript">
+            function addToxicity() {
+                var inputs = document.getElementsByTagName("input");
+                var toxCat = inputs[11].value;
+                var tox = inputs[12].value;
+                var toxComments = inputs[13].value;
+                var toxGrade = inputs[14].value;
+                
+                var div = "<div class='toxicity'>"+toxCat+" - "+tox+" - "+toxComments+" - "+toxGrade+"</div>";
+                existingToxicities = document.getElementById("toxs").innerHTML;
+                document.getElementById("toxs").innerHTML = existingToxicities+div;
+                document.getElementById("osrDiv").innerHTML = "OSR# "+ Math.floor((Math.random()*50000)+1);
+            }
+            function clearForm() {
+                document.getElementById("toxs").innerHTML = "";
+                var inputs = document.getElementsByTagName("input");
+                for (input in inputs) {
+                    inputs[input].value = "";
+                    inputs[input].checked = false
+                }
+            }
+            
+            function submitForm(args) {
+                clearForm();
+                alert("Form Submitted.");
+            }
+            
+        </script>
+        <style type="text/css">
+            input{
+                margin-left: 5px;
+                margin-bottom: 5px;
+            }
+            span
+            {
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center">Patrick Anderson (CRA)</div>
+        <div style="text-align: center">UFHCC Clinical Trials Office</div>
+        <hr>
+        <div>
+            <button>eCRFs/Calendars</button>
+            <button>ePRMS</button>
+            <button>Financials</button>
+            <button>My Console</button>
+            <button>Protocols</button>
+            <button>Reports</button>
+            <button>Reviews</button>
+            <button>Subjects</button>
+            <span>Effort Tracking</span>
+        </div>
+        <hr>
+         <h3>New OSR</h3>
+        <div>
+            *Agent<input type="text">
+            *Event Date<input type="text">
+            Issued Date<input type="text">
+        </div>
+        <div>
+            Drug Company<input type="text">
+            OSR Report#<input type="text">
+            Subject Description<input type="text">
+        </div>
+        <div>
+            Death within<input type="text">
+            Hospitalization<input type="checkbox">
+            Follow-Up No.<input type="text">
+        </div>
+        <div>
+            Reviewed by the DSMB<input type="text">
+        </div>
+        <div>
+            <span>Sponsor Comments</span><input type="text" size="100">
+        </div>
+        <h5>Toxicity</h5>
+        <div id="toxs"></div>
+        <div>
+            <table>
+                <tr>
+                    <td>Toxicity Category</td>
+                    <td>Toxicity</td>
+                    <td>Comments</td>
+                    <td>Grade</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <button onclick="addToxicity();">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h5>Internal Tracking</h5>
+        <div>
+            <table style="width: 500px; overflow: visible">
+                <tr>
+                    <td>*Protocol No</td>
+                    <td>Recieved Date</td>
+                    <td>Pi Notified</td>
+                    <td>Attribution</td>
+                    <td>PI Comments</td>
+                    <td>Consent Form Changed</td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>PI Signed</td>
+                    <td>Not Reportable</td>
+                    <td>Reported to IRB</td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="checkbox"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan='9' style="text-align: center; margin-right: 50px">
+                        <button>Add</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div style="float: right">
+            <button onclick="submitForm();">Submit</button>
+            <button onclick="clearForm();">Clear</button>
+            <button>Close</button>
+        </div>
+        <div style="text-align: center; vertical-align: bottom!important; margin: 0px!important">
+            OffCore: <span style="font-weight: bold">Off</span>line <span style="font-weight: bold">Co</span>nceptualization and <span style="font-weight: bold">R</span>endition <span style="font-weight: bold">E</span>nvironment
+        </div>
+               <div id="osrDiv"></div>
+    </body>
+</html>
